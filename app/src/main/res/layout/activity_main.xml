@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+   <LinearLayout
+       android:layout_width="match_parent"
+       android:layout_height="match_parent"
+       android:orientation="vertical">
+       <!-- Step 1. Put the layout changes for the open/close session step here -->
+       <TextView
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:text="User"
+           android:textSize="20sp"
+           android:textStyle="bold"/>
+
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:orientation="horizontal">
+
+           <EditText
+               android:id="@+id/user_name"
+               android:layout_width="0dp"
+               android:layout_height="wrap_content"
+               android:layout_weight="1"
+               android:hint="User Name"/>
+           <EditText
+               android:id="@+id/role"
+               android:layout_width="0dp"
+               android:layout_height="wrap_content"
+               android:layout_weight="1"
+               android:hint="Role"/>
+
+
+               <Button
+                   android:id="@+id/login"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:text="log in" />
+
+               <Button
+                   android:id="@+id/logout"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:text="log out" />
+
+       </LinearLayout>
+       <!-- Step 2. Put the layout changes for the join conference step here -->
+       <TextView
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:text="conference name :" />
+
+       <EditText
+           android:id="@+id/conference_name"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content" />
+
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:orientation="horizontal">
+
+           <Button
+               android:id="@+id/join"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:text="start" />
+
+           <!-- Step 2.2. The layout will be upgraded in the leave conference step -->
+           <Button
+               android:id="@+id/leave"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:text="leave" />
+       </LinearLayout>
+
+       <!-- Step 3. Put the layout changes for the video step here -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/startVideo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="start video" />
+        <!-- Step 3.2. This layout will be upgraded in the stop video step -->
+        <Button
+            android:id="@+id/stopVideo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="stop video" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+
+        <EditText
+            android:id="@+id/chat_message"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+        <Button
+            android:id="@+id/hostChat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Chat" />
+
+    </LinearLayout>
+
+
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="300dp">
+
+           <LinearLayout
+               android:layout_width="0dp"
+               android:layout_height="match_parent"
+               android:layout_weight="1"
+               android:orientation="vertical">
+
+               <com.voxeet.sdk.views.VideoView
+                   android:id="@+id/video"
+                   android:layout_width="match_parent"
+                   android:layout_height="match_parent" />
+
+               <TextView
+                   android:id="@+id/host_name"
+                   android:layout_width="match_parent"
+                   android:layout_height="match_parent"
+                   android:textSize="50sp"
+                   android:textStyle="bold"
+                   android:text="Host name"
+                   android:layout_marginTop="10dp"/>
+
+           </LinearLayout>
+
+           <LinearLayout
+               android:layout_width="0dp"
+               android:layout_height="match_parent"
+               android:layout_weight="1"
+               android:orientation="vertical">
+
+               <com.voxeet.sdk.views.VideoView
+                   android:id="@+id/videoOther"
+                   android:layout_width="match_parent"
+                   android:layout_height="match_parent" />
+               <TextView
+                   android:id="@+id/host_name_other"
+                   android:layout_width="match_parent"
+                   android:layout_height="match_parent"
+                   android:textSize="50sp"
+                   android:textStyle="bold"
+                   android:text="Host name" />
+           </LinearLayout>
+       </LinearLayout>
+
+       <!-- Step 4. Put the layout changes for the view participants step here -->
+       <TextView
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:text="users :" />
+
+       <EditText
+           android:id="@+id/participants"
+           android:enabled="false"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content" />
+
+       <!-- Step 5. Put the layout changes for the screen sharing step here -->
+
+       <!-- Step 6. Put the layout changes for the recording step here -->
+
+
+       <TextView
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:id="@+id/chatMessagerecieved"/>
+
+   </LinearLayout>
+
+
+
+</ScrollView>
